@@ -1,48 +1,88 @@
+:root {
+  --primary: #4f46e5;
+  --bg: #f5f7fb;
+  --border: #d6dbe5;
+  --text: #111827;
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box
+}
+
 body {
-    font-family: system-ui, Arial;
-    background:#f6f8fb;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    min-height:100vh;
+  margin: 0;
+  font-family: system-ui, Segoe UI, Arial;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.center {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
-    background:#fff;
-    padding:32px;
-    border:1px solid #e3e7ee;
-    border-radius:12px;
-    width:340px;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px;
+  width: 420px;
 }
 
-h2 {
-    text-align:center;
-    margin-bottom:20px;
+.title {
+  text-align: center;
+  margin-bottom: 22px;
 }
 
-input, select {
-    width:100%;
-    padding:10px;
-    margin:6px 0;
-    border:1px solid #ccd3dd;
-    border-radius:8px;
+.form-row {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 12px;
+  align-items: center;
 }
 
-button {
-    width:100%;
-    padding:10px;
-    background:#2563eb;
-    border:none;
-    color:white;
-    border-radius:8px;
-    margin-top:10px;
-    cursor:pointer;
+.input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 14px;
 }
 
-a {
-    display:block;
-    text-align:center;
-    margin-top:10px;
-    color:#2563eb;
-    text-decoration:none;
+.radio-group {
+  display: flex;
+  gap: 18px;
+}
+
+.radio-group label {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.btn {
+  display: block;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  width: 100%;
+}
+
+.soft {
+  background: #eef2ff
+}
+
+.profile p {
+  margin: 8px 0
 }

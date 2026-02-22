@@ -1,0 +1,31 @@
+mysql> CREATE DATABASE loginapp;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> USE loginapp;
+Database changed
+
+mysql> CREATE TABLE students (
+    ->  id INT AUTO_INCREMENT PRIMARY KEY,
+    ->  name VARCHAR(100),
+    ->  gender VARCHAR(10),
+    ->  email VARCHAR(120),
+    ->  college VARCHAR(120),
+    ->  branch VARCHAR(80),
+    ->  mobile VARCHAR(20),
+    ->  username VARCHAR(60),
+    ->  password VARCHAR(120)
+    -> );
+Query OK, 0 rows affected (0.02 sec)
+
+
+
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100),
+    college VARCHAR(100),
+    address VARCHAR(200),
+    class VARCHAR(50),
+    branch VARCHAR(50),
+    gender VARCHAR(10),
+    password VARCHAR(100)
+);

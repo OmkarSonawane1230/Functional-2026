@@ -1,11 +1,20 @@
-<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles.css">
+<title>Login</title>
+</head>
 
-<div class="card">
-<h2>Login</h2>
+<body class="center soft">
 
-<form action="login" method="post">
-<input name="name" placeholder="Name">
-<input type="password" name="password" placeholder="Password">
-<button>Login</button>
+<form class="card" action="login" method="post">
+  <h2 class="title">Welcome Back</h2>
+
+  <input class="input" name="username" placeholder="User Name" required>
+  <input class="input" type="password" name="password" placeholder="Password" required>
+
+  <button class="btn">Login</button>
 </form>
-</div>
+
+</body>
+</html>

@@ -1,22 +1,62 @@
-<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="styles.css">
+<title>Student Registration</title>
+</head>
 
-<div class="card">
-<h2>Register</h2>
+<body class="center">
 
-<form action="register" method="post">
-<input name="name" placeholder="Name" required>
-<input name="college" placeholder="College">
-<input name="address" placeholder="Address">
-<input name="class" placeholder="Class">
-<input name="branch" placeholder="Branch">
+<form class="card" action="register" method="post">
 
-<select name="gender">
-  <option>Male</option>
-  <option>Female</option>
-</select>
+<h2 class="title">Student Registration</h2>
 
-<input type="password" name="password" placeholder="Password">
-
-<button>Create Account</button>
-</form>
+<div class="form-row">
+  <label>Name *</label>
+  <input class="input" name="name" required>
 </div>
+
+<div class="form-row">
+  <label>Gender *</label>
+  <div class="radio-group">
+    <label><input type="radio" name="gender" value="Male" checked> Male</label>
+    <label><input type="radio" name="gender" value="Female"> Female</label>
+  </div>
+</div>
+
+<div class="form-row">
+  <label>Email *</label>
+  <input class="input" type="email" name="email" required>
+</div>
+
+<div class="form-row">
+  <label>College *</label>
+  <input class="input" name="college">
+</div>
+
+<div class="form-row">
+  <label>Branch *</label>
+  <input class="input" name="branch">
+</div>
+
+<div class="form-row">
+  <label>Mobile *</label>
+  <input class="input" name="mobile">
+</div>
+
+<div class="form-row">
+  <label>Username *</label>
+  <input class="input" name="username">
+</div>
+
+<div class="form-row">
+  <label>Password *</label>
+  <input class="input" type="password" name="password">
+</div>
+
+<button class="btn">Submit</button>
+
+</form>
+
+</body>
+</html>

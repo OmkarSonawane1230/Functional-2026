@@ -79,7 +79,7 @@ cp -r /workspaces/Functional-2026/WT_CODES/webapps/loginapp /home/codespace/tomc
 If you keep updating frequently, use sync instead of delete+copy:
 
 ```
-rsync -av --delete /workspaces/Functional-2026/WT_CODES/webapps/loginapp/ /home/codespace/tomcat/webapps/
+rsync -av --delete /workspaces/Functional-2026/WT_CODES/webapps/loginapp/ /home/codespace/tomcat/webapps/loginapp/
 ```
 
 
