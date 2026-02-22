@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Form</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: system-ui, Arial;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f4f4f4;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background: #fff;
+            padding: 30px;
+            width: 420px;
+            border: 1px solid #ddd;
+            border-radius: 14px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        label {
+            font-size: 17px;
+        }
+
+        input, select, textarea {
+            font-size: 16px;
+            padding: 8px;
+            border: 1px solid #bbb;
+            border-radius: 8px;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px;
+            background: #2f5fa8;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #msg {
+            text-align: center;
+            font-weight: 600;
+            margin-top: 5px;
+        }
+
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+
+    <script>
+        function check() {
+            const f = document.forms[0];
+            const msg = document.getElementById("msg");
+
+            if (!f.fname.value ||
+                !f.mname.value ||
+                !f.lname.value ||
+                !f.address.value ||
+                !f.phone.value) {
+
+                msg.textContent = "Form not submitted. Fill all fields.";
+                msg.className = "error";
+                return false;
+            }
+
+            // Phone validation (10 digits only)
+            if (!/^\d{10}$/.test(f.phone.value)) {
+                msg.textContent = "Phone number must be 10 digits.";
+                msg.className = "error";
+                return false;
+            }
+
+            msg.textContent = "Form submitted successfully.";
+            msg.className = "success";
+            f.reset();
+            return false;
+        }
+    </script>
+</head>
+
+<body>
+
+<form onsubmit="return check()">
+    <h1>Student Validation Form</h1>
+
+    <label>First Name</label>
+    <input name="fname">
+
+    <label>Middle Name</label>
+    <input name="mname">
+
+    <label>Last Name</label>
+    <input name="lname">
+
+    <label>Phone Number</label>
+    <input name="phone">
+
+    <label>Country</label>
+    <select>
+        <option></option>
+        <option>India</option>
+        <option>America</option>
+        <option>Australia</option>
+        <option>Sweden</option>
+        <option>Africa</option>
+    </select>
+
+    <label>Address</label>
+    <textarea name="address" rows="4"></textarea>
+
+    <button type="submit">Submit</button>
+
+    <div id="msg"></div>
+</form>
+
+</body>
+</html>

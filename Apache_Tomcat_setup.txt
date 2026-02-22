@@ -1,0 +1,26 @@
+@OmkarSonawane1230 ➜ ~ $ wget https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.52/bin/apache-tomcat-10.1.52.tar.gz
+--2026-02-21 17:23:19--  https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.52/bin/apache-tomcat-10.1.52.tar.gz
+Resolving dlcdn.apache.org (dlcdn.apache.org)... 151.101.2.132, 2a04:4e42::644
+Connecting to dlcdn.apache.org (dlcdn.apache.org)|151.101.2.132|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 14315238 (14M) [application/x-gzip]
+Saving to: ‘apache-tomcat-10.1.52.tar.gz’
+
+apache-tomcat-10.1.52.tar.gz           100%[===========================================================================>]  13.65M  28.6MB/s    in 0.5s    
+
+2026-02-21 17:23:34 (28.6 MB/s) - ‘apache-tomcat-10.1.52.tar.gz’ saved [14315238/14315238]
+
+@OmkarSonawane1230 ➜ ~ $ tar -xzf apache-tomcat-10.1.52.tar.gz
+mv apache-tomcat-10.1.52 tomcat
+@OmkarSonawane1230 ➜ ~ $ cd ~/tomcat/bin
+chmod +x *.sh
+./startup.sh
+Using CATALINA_BASE:   /home/codespace/tomcat
+Using CATALINA_HOME:   /home/codespace/tomcat
+Using CATALINA_TMPDIR: /home/codespace/tomcat/temp
+Using JRE_HOME:        /usr/local/sdkman/candidates/java/current
+Using CLASSPATH:       /home/codespace/tomcat/bin/bootstrap.jar:/home/codespace/tomcat/bin/tomcat-juli.jar
+Using CATALINA_OPTS:   
+Tomcat started.
+@OmkarSonawane1230 ➜ ~/tomcat/bin $
+

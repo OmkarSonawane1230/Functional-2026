@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="books.css"?>
+
+<CATALOG>
+
+    <BOOK>
+        <TITLE>Database System Concepts</TITLE>
+        <AUTHOR>Abraham Silberschatz</AUTHOR>
+        <YEAR>2019</YEAR>
+        <PRICE>₹750.00</PRICE>
+    </BOOK>
+
+    <BOOK>
+        <TITLE>Computer Networks</TITLE>
+        <AUTHOR>Andrew S. Tanenbaum</AUTHOR>
+        <YEAR>2021</YEAR>
+        <PRICE>₹820.00</PRICE>
+    </BOOK>
+
+    <BOOK>
+        <TITLE>Introduction to Algorithms</TITLE>
+        <AUTHOR>Thomas H. Cormen</AUTHOR>
+        <YEAR>2022</YEAR>
+        <PRICE>₹950.00</PRICE>
+    </BOOK>
+
+    <BOOK>
+        <TITLE>Artificial Intelligence: A Modern Approach</TITLE>
+        <AUTHOR>tuart Russell<S/AUTHOR>
+        <YEAR>2020</YEAR>
+        <PRICE>₹890.00</PRICE>
+    </BOOK>
+
+    <BOOK>
+        <TITLE>Clean Code</TITLE>
+        <AUTHOR>Robert C. Martin</AUTHOR>
+        <YEAR>2018</YEAR>
+        <PRICE>₹650.00</PRICE>
+    </BOOK>
+
+</CATALOG>
