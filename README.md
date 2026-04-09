@@ -92,7 +92,10 @@ Both of this work
 ```
 javac -cp "/home/codespace/tomcat/lib/*" *.java
 javac -cp "/home/codespace/tomcat/lib/servlet-api.jar" *.java
-``
+```
+
+
+```
 
 pip install notebook
 
@@ -105,3 +108,4 @@ sudo apt-get install texlive-xetex texlive-fonts-recommended texlive-plain-gener
 
 jupyter nbconvert --to pdf your_notebook.ipynb --LatexPreprocessor.date=""
 
+```
