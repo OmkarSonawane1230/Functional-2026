@@ -93,11 +93,18 @@ Both of this work
 javac -cp "/home/codespace/tomcat/lib/*" *.java
 javac -cp "/home/codespace/tomcat/lib/servlet-api.jar" *.java
 ```
+<<<<<<< HEAD
 
 
 ```
+=======
+>>>>>>> bb32e48b2f1794f0f4bde6eab4feb22a156f7982
 
-pip install notebook
+
+## Setup for Notebook
+
+```
+pip3 install notebook
 
 
 jupyter lab --ip=0.0.0.0 --no-browser
@@ -107,5 +114,15 @@ sudo apt-get install texlive-xetex texlive-fonts-recommended texlive-plain-gener
 
 
 jupyter nbconvert --to pdf your_notebook.ipynb --LatexPreprocessor.date=""
+```
 
+<<<<<<< HEAD
+=======
+
+## Extra Python Libraries Required
+
+```
+pip3 install pandas numpy seaborn matplotlib scikit-learn nltk
+
+>>>>>>> bb32e48b2f1794f0f4bde6eab4feb22a156f7982
 ```
