@@ -96,3 +96,20 @@ jupyter nbconvert --to pdf your_notebook.ipynb --LatexPreprocessor.date=""
 ## Extra Python Libraries Required
 
 pip3 install pandas numpy seaborn matplotlib scikit-learn nltk
+
+
+## when setting PHP do following
+
+```
+sudo apt-get update
+sudo apt-get install php-cli php-mysql
+
+export PATH=/usr/bin:$PATH
+
+#output should be /usr/bin/php
+
+php -v
+php -m | grep mysqli
+
+php -S localhost:8000
+```

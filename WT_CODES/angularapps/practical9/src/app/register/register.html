@@ -1,0 +1,31 @@
+<div class="register-container">
+  <div class="register-form">
+    <div class="logo-container">
+      <h1 class="title">Create your account</h1>
+      <p class="subtitle">Angular JS Web App 'Practical 9'</p>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="register()">
+      <div class="input-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Choose a username" formControlName="username">
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" formControlName="email">
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Create a password" formControlName="password">
+      </div>
+
+      <button type="submit" class="create-account-btn" [disabled]="form.invalid">Create account</button>
+
+      <p class="signin-link">
+        Already have an account? <a routerLink="/login">Sign in</a>
+      </p>
+    </form>
+  </div>
+</div>

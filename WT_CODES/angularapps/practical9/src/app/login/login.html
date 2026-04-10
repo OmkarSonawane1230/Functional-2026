@@ -1,0 +1,26 @@
+<div class="login-container">
+  <div class="login-form">
+    <div class="logo-container">
+      <h1 class="title">Sign in</h1>
+      <p class="subtitle">Angular JS Web App 'Practical 9'</p>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="login()">
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" formControlName="email">
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" formControlName="password">
+      </div>
+
+      <button type="submit" class="signin-btn" [disabled]="form.invalid">Sign in</button>
+
+      <p class="signup-link">
+        No account? <a routerLink="/register">Create Account</a>
+      </p>
+    </form>
+  </div>
+</div>
