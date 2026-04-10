@@ -1,0 +1,10 @@
+2026-04-09 10:00:01 INFO UserLogin: User logged in successfully - user1
+2026-04-09 10:05:02 ERROR Database: Connection failed to database server
+2026-04-09 10:10:03 INFO Search: User searched for 'hadoop' - user2
+2026-04-09 10:15:04 WARN Disk: Disk usage is above 80%
+2026-04-09 10:20:05 INFO UserLogout: User logged out - user1
+2026-04-09 10:25:06 ERROR FileSystem: File not found: /data/config.xml
+2026-04-09 10:30:07 INFO UserLogin: User logged in successfully - user3
+2026-04-09 10:35:08 ERROR Database: Query timeout occurred
+2026-04-09 10:40:09 INFO Search: User searched for 'mapreduce' - user3
+2026-04-09 10:45:10 WARN Network: Latency spike detected
