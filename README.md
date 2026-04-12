@@ -90,6 +90,10 @@ jupyter lab --ip=0.0.0.0 --no-browser
 
 sudo apt-get install texlive-xetex texlive-fonts-recommended texlive-plain-generic
 
+sudo apt-get update
+
+sudo apt-get install -y pandoc
+
 jupyter nbconvert --to pdf your_notebook.ipynb --LatexPreprocessor.date=""
 
 
