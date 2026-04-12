@@ -113,3 +113,7 @@ php -m | grep mysqli
 
 php -S localhost:8000
 ```
+
+## use to kill portno
+
+fuser -k 4848/tcp

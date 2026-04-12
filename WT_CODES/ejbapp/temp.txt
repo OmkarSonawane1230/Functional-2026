@@ -1,0 +1,69 @@
+# Create the classes directory (if not done)
+mkdir -p /workspaces/Functional-2026/WT_CODES/ejbapp/src/main/webapp/WEB-INF/classes
+
+# Compile the EJB and Servlet using jakartaee.jar
+javac -cp "/workspaces/Functional-2026/glassfish8/glassfish/lib/jakartaee.jar" \
+-d /workspaces/Functional-2026/WT_CODES/ejbapp/src/main/webapp/WEB-INF/classes \
+/workspaces/Functional-2026/WT_CODES/ejbapp/src/main/java/com/bank/*.java
+
+
+# Start GlassFish
+/workspaces/Functional-2026/glassfish8/bin/asadmin start-domain
+
+# Deploy the WAR (after building it in step 3 of SETUP.md)
+/workspaces/Functional-2026/glassfish8/bin/asadmin deploy /workspaces/Functional-2026/WT_CODES/ejbapp/ejb-bank-app.war
+
+
+
+-0--------------------------------------------------------------------
+unzip -q web-8.0.0.zip
+
+
+1. Compile the Java files
+
+# Create classes directory
+mkdir -p /workspaces/Functional-2026/WT_CODES/ejbapp/src/main/webapp/WEB-INF/classes
+
+# Compile
+javac -cp "/workspaces/Functional-2026/glassfish8/glassfish/lib/jakartaee.jar" \
+-d /workspaces/Functional-2026/WT_CODES/ejbapp/src/main/webapp/WEB-INF/classes \
+/workspaces/Functional-2026/WT_CODES/ejbapp/src/main/java/com/bank/*.java
+
+
+
+2. Package the WAR file
+
+
+cd /workspaces/Functional-2026/WT_CODES/ejbapp/src/main/webapp/
+zip -r /workspaces/Functional-2026/WT_CODES/ejbapp/ejb-bank-app.war .
+cd /workspaces/Functional-2026/
+
+
+
+Start GlassFish and Deploy
+
+
+/workspaces/Functional-2026/glassfish8/bin/asadmin stop-domain
+/workspaces/Functional-2026/glassfish8/bin/asadmin start-domain
+
+
+# Start Server
+/workspaces/Functional-2026/glassfish8/bin/asadmin start-domain
+
+# Deploy App
+/workspaces/Functional-2026/glassfish8/bin/asadmin deploy --force /workspaces/Functional-2026/WT_CODES/ejbapp/ejb-bank-app.war
+
+
+
+# 1. Compile the code
+javac -cp "/workspaces/Functional-2026/glassfish8/glassfish/lib/jakartaee.jar" \
+-d /workspaces/Functional-2026/WT_CODES/ejbapp/src/main/webapp/WEB-INF/classes \
+/workspaces/Functional-2026/WT_CODES/ejbapp/src/main/java/com/bank/*.java
+
+# 2. Package the WAR
+cd /workspaces/Functional-2026/WT_CODES/ejbapp/src/main/webapp/
+zip -r /workspaces/Functional-2026/WT_CODES/ejbapp/ejb-bank-app.war .
+cd /workspaces/Functional-2026/
+
+# 3. Deploy
+/workspaces/Functional-2026/glassfish8/bin/asadmin deploy --force /workspaces/Functional-2026/WT_CODES/ejbapp/ejb-bank-app.war

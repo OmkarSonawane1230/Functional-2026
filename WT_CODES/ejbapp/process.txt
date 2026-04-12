@@ -1,0 +1,28 @@
+$ /workspaces/Functional-2026/glassfish8/bin/asadmin start-domain
+Waiting until start of domain domain1 completes........... ... finished after 10448 ms.
+
+Successfully started the domain domain1.
+  Location: /workspaces/Functional-2026/glassfish8/glassfish/domains/domain1
+  Log File: /workspaces/Functional-2026/glassfish8/glassfish/domains/domain1/logs/server.log
+  The pid file /workspaces/Functional-2026/glassfish8/glassfish/domains/domain1/config/pid contains pid 37160.
+  Process with pid 37160 is alive
+  Admin Endpoints:
+    http://localhost:4848 is reachable.
+
+Command start-domain executed successfully.
+
+$ cd /workspaces/Functional-2026/WT_CODES/ejbapp/src/main/webapp/
+zip -r /workspaces/Functional-2026/WT_CODES/ejbapp/ejb-bank-app.war .
+  adding: WEB-INF/ (stored 0%)
+  adding: WEB-INF/classes/ (stored 0%)
+  adding: WEB-INF/classes/com/ (stored 0%)
+  adding: WEB-INF/classes/com/bank/ (stored 0%)
+  adding: WEB-INF/classes/com/bank/BankBean.class (deflated 43%)
+  adding: WEB-INF/classes/com/bank/BankServlet.class (deflated 48%)
+  adding: WEB-INF/web.xml (deflated 51%)
+  adding: index.jsp (deflated 70%)
+
+
+$ /workspaces/Functional-2026/glassfish8/bin/asadmin deploy /workspaces/Functional-2026/WT_CODES/ejbapp/ejb-bank-app.war
+Application deployed with name ejb-bank-app.
+Command deploy executed successfully.
