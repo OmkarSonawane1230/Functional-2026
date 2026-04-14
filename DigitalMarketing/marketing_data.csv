@@ -1,0 +1,6 @@
+campaign_id,ad_id,keyword,clicks,impressions,spend,is_click
+C1,A1,shoes,150,1000,50.0,1
+C1,A2,sneakers,80,500,30.0,1
+C2,A3,shirts,200,2000,100.0,1
+C3,A4,pants,10,300,10.0,0
+C3,A5,ties,5,100,5.0,0

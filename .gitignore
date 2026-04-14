@@ -1,2 +1,16 @@
 *.class
+*.jar
 /glassfish8
+
+# Digital Marketing Setup Binaries, Archives & Logs
+/DigitalMarketing/hadoop-3.3.6.tar.gz
+/DigitalMarketing/hadoop-3.3.6/
+/DigitalMarketing/apache-hive-3.1.3-bin.tar.gz
+/DigitalMarketing/apache-hive-3.1.3-bin/
+/DigitalMarketing/hbase-2.5.5-bin.tar.gz
+/DigitalMarketing/hbase-2.5.5/
+/DigitalMarketing/solr-8.11.2.tgz
+/DigitalMarketing/solr-8.11.2/
+/DigitalMarketing/metastore_db/
+/DigitalMarketing/derby.log
+/DigitalMarketing/tmp/
