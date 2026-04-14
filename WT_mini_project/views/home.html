@@ -1,0 +1,100 @@
+<!-- Home View -->
+
+<!-- Hero -->
+<div class="home-hero">
+  <h1>Book your <strong>doctor's appointment</strong></h1>
+  <p>Find the right specialist, choose a convenient time, and manage all your visits in one place.</p>
+  <div class="home-hero-actions">
+    <a href="#!/book" class="btn-primary btn-primary-lg">
+      <span class="material-icons">add_circle_outline</span>
+      Book Appointment
+    </a>
+    <a href="#!/doctors" class="btn-outlined" style="height:44px; padding: 0 28px; font-size:15px;">
+      Browse Doctors
+    </a>
+  </div>
+</div>
+
+<!-- Main Content -->
+<div class="content-area">
+
+  <!-- Stats -->
+  <div class="stats-row">
+    <div class="stat-item">
+      <div class="stat-icon-wrap stat-icon-blue">
+        <span class="material-icons">local_hospital</span>
+      </div>
+      <div>
+        <div class="stat-value">{{ totalDoctors }}</div>
+        <div class="stat-label">Doctors available</div>
+      </div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon-wrap stat-icon-green">
+        <span class="material-icons">check_circle</span>
+      </div>
+      <div>
+        <div class="stat-value">{{ availableDoctors }}</div>
+        <div class="stat-label">Accepting bookings</div>
+      </div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-icon-wrap stat-icon-orange">
+        <span class="material-icons">event_note</span>
+      </div>
+      <div>
+        <div class="stat-value">{{ totalAppointments }}</div>
+        <div class="stat-label">Appointments booked</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features -->
+  <p class="section-title" style="margin-bottom:16px;">How it works</p>
+  <div class="feature-grid" style="margin-bottom: 40px;">
+    <div class="feature-item">
+      <span class="material-icons">search</span>
+      <h3>Find a doctor</h3>
+      <p>Browse our specialists by name or department and view their availability.</p>
+    </div>
+    <div class="feature-item">
+      <span class="material-icons">edit_calendar</span>
+      <h3>Book a slot</h3>
+      <p>Fill in your details, pick a date and time, and confirm your appointment.</p>
+    </div>
+    <div class="feature-item">
+      <span class="material-icons">manage_accounts</span>
+      <h3>Manage visits</h3>
+      <p>View, edit or cancel your appointments any time from the Appointments page.</p>
+    </div>
+  </div>
+
+  <!-- Doctors preview -->
+  <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+    <p class="section-title" style="margin:0;">Available doctors</p>
+    <a href="#!/doctors" class="btn-text">
+      View all <span class="material-icons" style="font-size:16px;">arrow_forward</span>
+    </a>
+  </div>
+
+  <div class="home-doctors-grid">
+    <div class="doctor-row" ng-repeat="doc in featuredDoctors">
+      <div class="doc-avatar">{{ doc.initials }}</div>
+      <div class="doc-main">
+        <div class="doc-name">{{ doc.name }}</div>
+        <div class="doc-spec">{{ doc.specialization }}</div>
+        <div class="doc-meta">
+          <span><span class="material-icons">schedule</span>{{ doc.availableDays }}</span>
+          <span><span class="material-icons">access_time</span>{{ doc.availableTime }}</span>
+        </div>
+      </div>
+      <div class="doc-status">
+        <span class="status-chip" ng-class="doc.status === 'available' ? 'status-available' : 'status-busy'">
+          <span class="status-dot" ng-class="doc.status === 'available' ? 'dot-green' : 'dot-red'"></span>
+          {{ doc.status === 'available' ? 'Available' : 'Busy' }}
+        </span>
+      </div>
+    </div>
+  </div>
+
+</div>

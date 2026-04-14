@@ -1,0 +1,152 @@
+<!-- Book Appointment View -->
+
+<page-header title="Book Appointment" subtitle="Fill in the details below to schedule your visit"></page-header>
+
+<div class="content-area">
+
+  <app-alert type="success" [message]="successMsg"></app-alert>
+  <app-alert type="error" [message]="errorMsg"></app-alert>
+
+  <div class="form-card">
+    <h2>Patient &amp; Appointment Details</h2>
+
+    <form #bookForm="ngForm" novalidate (ngSubmit)="submitForm(bookForm)">
+
+      <!-- Patient section -->
+      <p class="form-section-label">Patient information</p>
+
+      <div class="form-row form-row-3">
+        <div class="form-field"
+             [ngClass]="{'has-error': (submitted || patientName.touched) && patientName.invalid}">
+          <label for="patientName">Full Name</label>
+          <input type="text" id="patientName" name="patientName"
+                 [(ngModel)]="appointment.patientName"
+                 #patientName="ngModel"
+                 placeholder="e.g. Ravi Kumar"
+                 required minlength="3" />
+          <div class="error-msg"
+               *ngIf="(submitted || patientName.touched) && patientName.invalid">
+            <span class="material-icons">error_outline</span>
+            <span *ngIf="patientName.errors?.['required']">Required</span>
+            <span *ngIf="patientName.errors?.['minlength']">Min 3 characters</span>
+          </div>
+        </div>
+
+        <div class="form-field"
+             [ngClass]="{'has-error': (submitted || age.touched) && age.invalid}">
+          <label for="age">Age</label>
+          <input type="number" id="age" name="age"
+                 [(ngModel)]="appointment.age"
+                 #age="ngModel"
+                 placeholder="e.g. 30"
+                 required min="1" max="120" />
+          <div class="error-msg"
+               *ngIf="(submitted || age.touched) && age.invalid">
+            <span class="material-icons">error_outline</span>
+            Enter a valid age
+          </div>
+        </div>
+
+        <div class="form-field"
+             [ngClass]="{'has-error': submitted && gender.invalid}">
+          <label>Gender</label>
+          <div class="radio-group" style="padding-top:8px;">
+            <label>
+              <input type="radio" name="gender" [(ngModel)]="appointment.gender" value="Male" required #gender="ngModel" />
+              Male
+            </label>
+            <label>
+              <input type="radio" name="gender" [(ngModel)]="appointment.gender" value="Female" />
+              Female
+            </label>
+            <label>
+              <input type="radio" name="gender" [(ngModel)]="appointment.gender" value="Other" />
+              Other
+            </label>
+          </div>
+          <div class="error-msg" *ngIf="submitted && gender.invalid">
+            <span class="material-icons">error_outline</span> Required
+          </div>
+        </div>
+      </div>
+
+      <!-- Appointment section -->
+      <p class="form-section-label">Appointment details</p>
+
+      <div class="form-field"
+           [ngClass]="{'has-error': (submitted || doctorId.touched) && doctorId.invalid}">
+        <label for="doctorId">Doctor</label>
+        <select id="doctorId" name="doctorId"
+                [(ngModel)]="appointment.doctorId"
+                (change)="onDoctorChange()"
+                #doctorId="ngModel"
+                required>
+          <option value="">Select a doctor</option>
+          <option *ngFor="let doc of doctors" [value]="doc.id">
+            {{ doc.name }} &mdash; {{ doc.specialization }}
+          </option>
+        </select>
+        <div class="error-msg"
+             *ngIf="(submitted || doctorId.touched) && doctorId.invalid">
+          <span class="material-icons">error_outline</span> Please select a doctor
+        </div>
+      </div>
+
+      <!-- Doctor hint -->
+      <div class="doctor-hint" *ngIf="appointment.doctorName">
+        <span class="material-icons">info</span>
+        <span><strong>{{ appointment.doctorName }}</strong> &mdash; {{ appointment.doctorSpec }}</span>
+      </div>
+
+      <div class="form-row form-row-2">
+        <div class="form-field"
+             [ngClass]="{'has-error': (submitted || apptDate.touched) && (apptDate.invalid || isPastDate())}">
+          <label for="apptDate">Date</label>
+          <input type="date" id="apptDate" name="apptDate"
+                 [(ngModel)]="appointment.date"
+                 #apptDate="ngModel"
+                 [min]="todayStr"
+                 required />
+          <div class="error-msg" *ngIf="(submitted || apptDate.touched) && apptDate.invalid">
+            <span class="material-icons">error_outline</span> Please select a valid date
+          </div>
+          <div class="error-msg" *ngIf="isPastDate()">
+            <span class="material-icons">error_outline</span> Cannot select a past date
+          </div>
+        </div>
+
+        <div class="form-field"
+             [ngClass]="{'has-error': (submitted || apptTime.touched) && apptTime.invalid}">
+          <label for="apptTime">Time</label>
+          <select id="apptTime" name="apptTime"
+                  [(ngModel)]="appointment.time"
+                  #apptTime="ngModel"
+                  required>
+            <option value="">Select a time</option>
+            <option *ngFor="let slot of timeSlots" [value]="slot">{{ slot }}</option>
+          </select>
+          <div class="error-msg" *ngIf="(submitted || apptTime.touched) && apptTime.invalid">
+            <span class="material-icons">error_outline</span> Please select a time slot
+          </div>
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="notes">Notes <span style="text-transform:none; font-weight:400; letter-spacing:0;">(optional)</span></label>
+        <textarea id="notes" name="notes" [(ngModel)]="appointment.notes" rows="3" placeholder="Briefly describe your symptoms or reason for visit"></textarea>
+      </div>
+
+      <div style="display:flex; gap:12px; margin-top:8px;">
+        <button type="submit" class="btn-primary btn-primary-lg">
+          <span class="material-icons">check</span>
+          Confirm Appointment
+        </button>
+        <a routerLink="/doctors" class="btn-outlined" style="height:44px; padding:0 24px;">
+          Cancel
+        </a>
+      </div>
+
+    </form>
+  </div>
+
+</div>

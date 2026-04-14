@@ -1,0 +1,71 @@
+npm install -g @angular/cli
+
+added 285 packages in 40s
+
+67 packages are looking for funding
+  run `npm fund` for details
+
+  npm init @angular myApp
+Need to install the following packages:
+@angular/create@21.2.7
+Ok to proceed? (y) y
+
+
+
+
+
+> npx
+> "create" myApp
+
+ Would you like to enable autocompletion? This will set up your terminal so pressing TAB while typing Angular CLI commands will show possible options and 
+autocomplete arguments. (Enabling autocompletion will modify configuration files in your home directory.) Yes
+Appended `source <(ng completion script)` to `/home/codespace/.bashrc`. Restart your terminal or run the following to autocomplete `ng` commands:
+
+    source <(ng completion script)
+ 
+Would you like to share pseudonymous usage data about this project with the Angular Team
+at Google under Google's Privacy Policy at https://policies.google.com/privacy. For more
+details and how to change this setting, see https://angular.dev/cli/analytics.
+
+   Yes
+
+Thank you for sharing pseudonymous usage data. Should you change your mind, the following
+command will disable this feature entirely:
+
+    ng analytics disable --global
+
+Global setting: enabled
+Local setting: No local workspace configuration file.
+Effective status: enabled
+✔ Which stylesheet system would you like to use? CSS             [ https://developer.mozilla.org/docs/Web/CSS                     ]
+✔ Do you want to enable Server-Side Rendering (SSR) and Static Site Generation (SSG/Prerendering)? Yes
+✔ Which AI tools do you want to configure with Angular best practices? https://angular.dev/ai/develop-with-ai None
+CREATE myApp/.prettierrc (161 bytes)
+CREATE myApp/README.md (1458 bytes)
+CREATE myApp/.editorconfig (314 bytes)
+CREATE myApp/.gitignore (622 bytes)
+CREATE myApp/angular.json (2129 bytes)
+CREATE myApp/package.json (1004 bytes)
+CREATE myApp/tsconfig.json (957 bytes)
+CREATE myApp/tsconfig.app.json (447 bytes)
+CREATE myApp/tsconfig.spec.json (441 bytes)
+CREATE myApp/.vscode/extensions.json (130 bytes)
+CREATE myApp/.vscode/launch.json (470 bytes)
+CREATE myApp/.vscode/mcp.json (179 bytes)
+CREATE myApp/.vscode/tasks.json (978 bytes)
+CREATE myApp/src/main.ts (222 bytes)
+CREATE myApp/src/index.html (291 bytes)
+CREATE myApp/src/styles.css (80 bytes)
+CREATE myApp/src/main.server.ts (292 bytes)
+CREATE myApp/src/server.ts (1609 bytes)
+CREATE myApp/src/app/app.css (0 bytes)
+CREATE myApp/src/app/app.spec.ts (672 bytes)
+CREATE myApp/src/app/app.ts (287 bytes)
+CREATE myApp/src/app/app.html (20144 bytes)
+CREATE myApp/src/app/app.config.ts (441 bytes)
+CREATE myApp/src/app/app.routes.ts (77 bytes)
+CREATE myApp/src/app/app.config.server.ts (426 bytes)
+CREATE myApp/src/app/app.routes.server.ts (166 bytes)
+CREATE myApp/public/favicon.ico (15086 bytes)
+✔ Packages installed successfully.
+    Directory is already under version control. Skipping initialization of git.

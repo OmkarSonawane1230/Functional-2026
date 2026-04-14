@@ -1,0 +1,25 @@
+<header class="app-bar">
+  <div class="app-bar-inner">
+    <a routerLink="/" class="app-bar-logo">
+      <span class="material-icons" style="vertical-align:bottom; margin-right:4px;">health_and_safety</span>
+      Hospital<span>App</span>
+    </a>
+    <ul class="app-bar-nav" id="mainNav">
+      <li><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+      <li><a routerLink="/doctors" routerLinkActive="active">Doctors</a></li>
+      <li><a routerLink="/book" routerLinkActive="active">Book Appointment</a></li>
+      <li><a routerLink="/appointments" routerLinkActive="active">My Appointments</a></li>
+    </ul>
+    <button class="nav-toggle" id="menuBtn">
+      <span class="material-icons">menu</span>
+    </button>
+  </div>
+</header>
+
+<div class="page-wrapper">
+  <router-outlet></router-outlet>
+</div>
+
+<footer style="text-align:center; padding:24px; color:#80868b; font-size:13px; border-top:1px solid #e8eaed; margin-top:40px; background:#fff;">
+  &copy; {{ currentYear }} Hospital Appointment System
+</footer>
